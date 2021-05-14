@@ -1,32 +1,24 @@
 package com.company;
 
-import java.util.ArrayList;
-
 public class Banka {
-    private String nazev;
-    private ArrayList<Ucet> ucty;
 
-    public Banka(String nazev) {
-        this.nazev = nazev;
-        this.ucty = new ArrayList<Ucet>();
+    private String banka;
+    private String typBanky;
+
+    public void setBanka(String banka) {
+        this.banka = banka;
+    }
+    public void setTypBanky(String typBanky) {
+        this.typBanky = typBanky;
     }
 
-    public String getNazev() {
-        return nazev;
+    public String getBanka() {
+        return banka;
     }
 
-    public void setNazev(String nazev) {
-        this.nazev = nazev;
-    }
-
-    public ArrayList<Ucet> getUcty() {
-        return ucty;
-    }
-
-    public void setUcty(ArrayList<Ucet> ucty) {
-        this.ucty = ucty;
-    }
-    public String toString(){
-        return "banka: " + nazev + " pocet uctu: " + ucty.size();
+    public String getTypBanky() {
+        return typBanky;
     }
 }
+
+

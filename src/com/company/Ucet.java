@@ -1,44 +1,37 @@
 package com.company;
 
 public class Ucet {
-    private String cislo;
-    private Clovek majitel;
-    private Double castka;
 
-    public Ucet(String cislo) {
-        this.cislo = cislo;
+    private int cisloUctu;
+    private int penize;
+    private Banka bankaUctu;
+
+    public Banka getBankaUctu() {
+        return bankaUctu;
     }
 
-    public Ucet(String cislo, Clovek majitel, Double castka) {
-        this.cislo = cislo;
-        this.majitel = majitel;
-        this.castka = castka;
+    public void setBankaUctu(Banka bankaUctu) {
+        this.bankaUctu = bankaUctu;
     }
 
-    public Double getCastka() {
-        return castka;
+    public void setCisloUctu(int cisloUctu) {
+        this.cisloUctu = cisloUctu;
+    }
+    public int getCisloUctu() {
+        return cisloUctu;
     }
 
-    public void setCastka(Double castka) {
-        this.castka = castka;
+    public void setPenize(int penize) {
+        this.penize = penize;
     }
 
-    public Clovek getMajitel() {
-        return majitel;
+    public Ucet(int cisloUctu, int penize, Banka bankaUctu) {
+        this.cisloUctu = cisloUctu;
+        this.penize = penize;
+        this.bankaUctu = bankaUctu;
     }
 
-    public void setMajitel(Clovek majitel) {
-        this.majitel = majitel;
-    }
-
-    public String getCislo() {
-        return cislo;
-    }
-
-    public void setCislo(String cislo) {
-        this.cislo = cislo;
-    }
-    public String toString(){
-        return ("cislo uctu: " + cislo + " majitel: " + majitel.toString() + " castka: " + castka);
+    public int getPenize() {
+        return penize;
     }
 }
